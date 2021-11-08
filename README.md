@@ -70,7 +70,20 @@ yarn test:watch
 yarn coverage
 ```
 
-Docker:
+Run application stack directly on docker:
+
+```bash
+# run docker container in development mode
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+# run docker container in production mode
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
+
+# run all tests in a docker container
+docker-compose -f docker-compose.yml -f docker-compose.test.yml up
+```
+
+Run application stack using NPM scripts (Optional):
 
 ```bash
 # run docker container in development mode
